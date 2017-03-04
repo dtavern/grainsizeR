@@ -1,0 +1,15 @@
+Package: grainsizeR
+Type: Package
+Title: Extract And Analyze Grain Size Distributions
+Version: 0.1.0
+Authors@R: person("David", "Tavernini", role=c("aut", "cre"),
+    email = "taverninid@gmail.com")
+Description: To allow for the extraction and analysis of sediment grain sizes
+    within the R framework using Shiny.
+License: MIT + file LICENSE
+Depends:
+    R (>= 3.3.2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
+Imports: shiny
