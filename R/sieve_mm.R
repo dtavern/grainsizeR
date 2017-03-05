@@ -32,7 +32,6 @@ sieve.mm <- function(x, sieve_sizes = c(8,11,16,22.6,32,45,64,90,128,180,256,360
                        ))
       df <- rbind(df, size)
     } # end ELSE
-
   }# endFOR
 
   return(df)
