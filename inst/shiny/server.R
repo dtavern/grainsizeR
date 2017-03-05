@@ -167,7 +167,7 @@ hscale_val <- reactive({input$hscale_val / hscale_loc() })
       measurement_count$counter <- isolate(measurement_count$counter + 1)
       
       measurement_observation <- isolate(c(
-        "measurment_no" = measurement_count$counter,
+        "measurement_no" = measurement_count$counter,
         "gsize_cm" = gsize(),
         "phi" = phi(),
         "too_small" = 0))
@@ -186,7 +186,7 @@ hscale_val <- reactive({input$hscale_val / hscale_loc() })
       measurement_count$counter <- isolate(measurement_count$counter + 1)
       
       measurement_observation <- isolate(c(
-        "measurment_no" = measurement_count$counter,
+        "measurement_no" = measurement_count$counter,
         "gsize_cm" = gsize(),
         "phi" = phi(),
         "too_small" = 1))
