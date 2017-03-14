@@ -8,4 +8,3 @@
 \description{
 Using R and Shiny as a framework for grain size extraction and analysis from imagery.
 }
-

@@ -20,4 +20,3 @@ elwha_wol
 A dataset containing 110 grain size samples extracted from Elwha River Wolman pebble count
 }
 \keyword{datasets}
-

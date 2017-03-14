@@ -23,4 +23,3 @@ elwha_img
 A dataset containing 100 grain size samples extracted from Elwha river imagery
 }
 \keyword{datasets}
-

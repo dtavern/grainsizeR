@@ -21,4 +21,3 @@ sieve data (phi)
 \examples{
 
 }
-

@@ -18,4 +18,3 @@ Note: this function trims the last number for plotting purposes
 \examples{
 
 }
-
