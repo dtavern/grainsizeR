@@ -12,6 +12,8 @@ stat.dx(sieve_size, cumu, d = 0.5, phi = FALSE)
 \item{cumu}{vector of corresponding cumulative distribution values}
 
 \item{d}{percentile value (decimal)}
+
+\item{phi}{logical to state if using phi units or not}
 }
 \value{
 value of grain size of desired percentile value

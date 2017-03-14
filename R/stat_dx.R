@@ -3,6 +3,7 @@
 #' @param sieve_size vector of sieve sizes
 #' @param cumu vector of corresponding cumulative distribution values
 #' @param d percentile value (decimal)
+#' @param phi logical to state if using phi units or not
 #'
 #' @return value of grain size of desired percentile value
 #' @export
