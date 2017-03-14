@@ -1,29 +1,30 @@
-grainsizeR
-================
-David Tavernini
+---
+title: "grainsizeR"
+author: "David Tavernini"
+output: github_document
+---
 
-Introduction
-------------
+
+## Introduction
 
 This is a package developed by David Tavernini for a term project in GEOB 503. This package contains all the tools necessary to extract grain sizes from images, digitally sieve grain size measurements, gather descriptive statistics on sieved data.
 
-Requirements
-------------
+## Requirements
 
 This app has two dependencies:
 
-1.  Shiny: can be installed from CRAN
+1. Shiny: can be installed from CRAN
 
-2.  [videoplayR](http://rpubs.com/sjmgarnier/videoplayR)
+2. [videoplayR](http://rpubs.com/sjmgarnier/videoplayR)
 
 System requirements:
 
-1.  Mac or Linux operating system for full functionality. Shiny app cannot be accessed on PC due to videoplayR only available for Mac and Linux
+1. Mac or Linux operating system for full functionality. Shiny app cannot be accessed on PC due to videoplayR only available for Mac and Linux
 
-2.  R(v3.3.2). Earlier versions may work
+2. R(v3.3.2). Earlier versions may work
 
-Features
---------
+
+## Features
 
 The features within this package allow for a self-contained workflow of grain size extraction, data sieving, descriptive statistics and probability distribution fitting. An example workflow would be:
 
@@ -35,7 +36,6 @@ The features within this package allow for a self-contained workflow of grain si
 
 ### 3.0 Descriptive Statistics
 
-### 4.0
+### 4.0 
 
-Example workflow
-----------------
+## Example workflow
