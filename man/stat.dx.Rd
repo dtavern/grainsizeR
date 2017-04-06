@@ -24,4 +24,3 @@ percentile return
 \examples{
 
 }
-
