@@ -10,5 +10,6 @@
 #'#' run.grainsizeR()  # Open app to begin grain size extraction interface
 
 run.grainsizeR <- function(){
-  shiny::runApp("inst/shiny/")
+  appDir <- system.file("shiny/", package = "grainsizeR")
+  shiny::runApp(appDir)
 }
