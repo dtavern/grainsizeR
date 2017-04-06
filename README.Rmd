@@ -1,6 +1,7 @@
 ---
 title: "grainsizeR"
 author: "David Tavernini"
+date: '2017-02-12'
 output: github_document
 ---
 

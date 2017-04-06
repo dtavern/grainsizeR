@@ -1,6 +1,7 @@
 grainsizeR
 ================
 David Tavernini
+2017-02-12
 
 Introduction
 ------------
@@ -39,8 +40,6 @@ If stones are too small, make the measurement to the best of your ability and fl
 
 If points are outside the measurement boundary or if the point resides on the same grain as a previously plotted point, click "Out of Interest" and a new point will be plotted without observation.
 
-Points that were recorded have coordinates saved and will appear as red circles with a blue center. These stones indicate that they have already been measured and should avoid further measurements.
-
 *Behind the Scenes*
 
 Scale calculations are derived from plotting two points in the image indicating distances known a priori or measurement tools present in the image (e.g. ruler).
@@ -49,11 +48,25 @@ The length between the two points plotted on the image during the scaling proces
 
 $$C = \\frac{L\_{img}}{L\_{real}}$$
 
+Each b-axis length is calculated using the formula above and converted to real world units by dividing by the horizontal and vertical scaling units for X and Y, respectively.
+
 ### 2.0 Data Sieving
+
+Following grain size collection (via image or pebble count), a vector of grain sizes can be inputted to `sieve.mm()` or `sieve.phi` (depending on units) to sieve the data into counts. This package has yet to develop functions for unsieved data, but using these functions will allow for smooth transition into future functions.
+
+In these functions, individual measurements are placed into the appropriate sieve classes based on the input arguments. These functions will return a dataframe with size class and the number of grains sieved by that size class.
 
 ### 3.0 Descriptive Statistics
 
-### 4.0
+**Size Distributions**
+
+With sieved data, size distributions can be determined by `prop.lessthan()` which takes a vector of counts according to ascending size and calculates the proportion of counts less than that entry. In other words, sums the number of values of indices less than each index value.
+
+**Percentile Values**
+
+Using the size distribution data output from `prop.lessthan()`, set arguments for sieve size and proportion accordingly, choose desired percentile value and results will be a value of grain size according to percentile value.
+
+### 4.0 Model
 
 Example workflow
 ----------------
