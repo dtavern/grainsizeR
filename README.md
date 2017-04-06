@@ -39,6 +39,8 @@ If stones are too small, make the measurement to the best of your ability and fl
 
 If points are outside the measurement boundary or if the point resides on the same grain as a previously plotted point, click "Out of Interest" and a new point will be plotted without observation.
 
+Points that were recorded have coordinates saved and will appear as red circles with a blue center. These stones indicate that they have already been measured and should avoid further measurements.
+
 *Behind the Scenes*
 
 Scale calculations are derived from plotting two points in the image indicating distances known a priori or measurement tools present in the image (e.g. ruler).
