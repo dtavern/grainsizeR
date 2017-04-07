@@ -9,7 +9,7 @@
 #'
 #' @examples
 #'
-prop.lessthan <- function(x){
+cumudist <- function(x){
   total <- sum(x, na.rm = TRUE)
   new <- cumsum(c(0, x))[1:1-length(x)] / total
   return(new)
