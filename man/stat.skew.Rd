@@ -3,6 +3,9 @@
 \name{stat.skew}
 \alias{stat.skew}
 \title{Measure skewness from cumulative distribution data}
+\source{
+see Bunte and Abt (2001) for examples and equations. Bunte, Kristin, and Steven R. Abt. "Sampling surface and subsurface particle-size distributions in wadable gravel-and cobble-bed streams for analyses in sediment transport, hydraulics, and streambed monitoring." (2001).
+}
 \usage{
 stat.skew(sieve_size, cumu, units = "phi", method = "all")
 }
@@ -16,7 +19,7 @@ stat.skew(sieve_size, cumu, units = "phi", method = "all")
 \item{method}{"inm" = Inman (1952) difference between mean and median divided by sorting;"inmod" = Modified Inman (1952) to account for tails;"fw" = Folk and Ward (1957) combination of the above;"war" = Warren (1974) simplified Folk and Ward;"gor" = Gordon (1992) less weighting on tails in case of unreliable data;"qsk" = Quartile skewness to use only inter-quartile data points;"tra" = Trask (1932) same as qsk but with mm units;"fred" = Fredle Index. Ratio of mean to sorting;"all" Output results of all methods in one dataframe}
 }
 \value{
-numeric or dataframe output according to the method chosen
+numeric or dataframe output according to the method chosen. NOTE: reverse skewness signage if using % finer
 }
 \description{
 Measure skewness from cumulative distribution data
