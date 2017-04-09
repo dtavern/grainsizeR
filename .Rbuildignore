@@ -3,3 +3,6 @@
 ^img/$
 ^README\.md$
 ^README\.Rmd$
+^/img/$
+^img/flowchart\.png$
+^img/flowRoot4720-7-5\.png$
