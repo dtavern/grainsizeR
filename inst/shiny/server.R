@@ -16,12 +16,12 @@ shinyServer(function(input, output) {
 
 
 measurement_count <- reactiveValues(counter = as.integer(0))
-size_table <- reactiveValues(df = data.frame("measurment_no" = integer(0),
+size_table <- reactiveValues(df = data.frame("measurement_no" = integer(0),
                         "gsize_cm" = numeric(0),
                         "phi" = numeric(0),
                         "too_small" = numeric(0)))
 
-point_table <- reactiveValues(df = data.frame("measurment_no" = integer(0),
+point_table <- reactiveValues(df = data.frame("measurement_no" = integer(0),
                                              "x" = numeric(0),
                                              "y" = numeric(0)))
 
