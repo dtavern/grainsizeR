@@ -15,3 +15,4 @@ Initialize shiny app for the grain size extraction from photographs
 \examples{
 #' run.grainsizeR()  # Open app to begin grain size extraction interface
 }
+

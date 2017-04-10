@@ -16,7 +16,7 @@ stat.kurt(sieve_size, cumu, units = "phi", method = "all")
 
 \item{units}{sieve size units "phi" = phi scale, "mm" = milimeter scale}
 
-\item{method}{Method to calculate kurtosis. "fw" = Folk and Ward, 1957. This method is typically used for phi units and is fairly standard; "inm" = Inman, 1952. For phi scale and focuses on tails of distribution; "tra" = Trask, 1932. For metric (mm) data.; "sqrt" = Square root method for geometric approach in metric units;"log" = log transform metric data. Geometric approach. "all" = compute all methods into a data frame.}
+\item{method}{Method to calculate kurtosis. Arithmetic methods: "fw" = Folk and Ward, 1957. This method is typically used for phi units and is fairly standard; "inm" = Inman, 1952. For phi scale and focuses on tails of distribution; "tra" = Trask, 1932. For metric (mm) data. Geometric methods: "sqrt" = Square root method for geometric approach in metric units;"log" = log transform metric data. Geometric approach. "all" = compute all methods into a data frame.}
 }
 \value{
 a numeric value or dataframe according to method chosen
@@ -27,3 +27,4 @@ Measure kurtosis from cumulative distribution data
 \examples{
 
 }
+

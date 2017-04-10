@@ -3,7 +3,7 @@
 #' @param sieve_size vector of sieve sizes related to input cumulative distribution
 #' @param cumu cumulative distribution pertaining to sieve sizes
 #' @param units sieve size units "phi" = phi scale, "mm" = milimeter scale
-#' @param method "inm" = Inman (1952) difference between mean and median divided by sorting;"inmod" = Modified Inman (1952) to account for tails;"fw" = Folk and Ward (1957) combination of the above;"war" = Warren (1974) simplified Folk and Ward;"gor" = Gordon (1992) less weighting on tails in case of unreliable data;"qsk" = Quartile skewness to use only inter-quartile data points;"tra" = Trask (1932) same as qsk but with mm units;"fred" = Fredle Index. Ratio of mean to sorting;"all" Output results of all methods in one dataframe
+#' @param method Arithmetic methods: "inm" = Inman (1952) difference between mean and median divided by sorting;"inmod" = Modified Inman (1952) to account for tails;"fw" = Folk and Ward (1957) combination of the above;"war" = Warren (1974) simplified Folk and Ward;"gor" = Gordon (1992) less weighting on tails in case of unreliable data;"qsk" = Quartile skewness to use only inter-quartile data points;"tra" = Trask (1932) same as qsk but with mm units. Geometric method: "fred" = Fredle Index. Ratio of mean to sorting. "all" Output results of all methods in one dataframe
 #'
 #' @return numeric or dataframe output according to the method chosen. NOTE: reverse skewness signage if using % finer
 #' @export
@@ -34,6 +34,8 @@ stat.skew <- function(sieve_size, cumu, units = "phi", method = "all"){
   p90 <- stat.dx(sieve_size, cumu, d = 0.90, phi = phi_in)
   p95 <- stat.dx(sieve_size, cumu, d = 0.95, phi = phi_in)
 
+  #Arithmetic methods
+
   if (method == "inm"){
     inm <- (p16+p84-2*p50) / (p84 - p16)
     return(inm)
@@ -62,6 +64,7 @@ stat.skew <- function(sieve_size, cumu, units = "phi", method = "all"){
     tra <- (p25 * p75) / (p50^2)
     return(tra)
   }
+  ## Geometric skewness
   if (method == "fred"){
     fred <- sqrt((p84*p16)/(p75 / p25))
     return(fred)

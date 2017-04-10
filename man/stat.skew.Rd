@@ -16,7 +16,7 @@ stat.skew(sieve_size, cumu, units = "phi", method = "all")
 
 \item{units}{sieve size units "phi" = phi scale, "mm" = milimeter scale}
 
-\item{method}{"inm" = Inman (1952) difference between mean and median divided by sorting;"inmod" = Modified Inman (1952) to account for tails;"fw" = Folk and Ward (1957) combination of the above;"war" = Warren (1974) simplified Folk and Ward;"gor" = Gordon (1992) less weighting on tails in case of unreliable data;"qsk" = Quartile skewness to use only inter-quartile data points;"tra" = Trask (1932) same as qsk but with mm units;"fred" = Fredle Index. Ratio of mean to sorting;"all" Output results of all methods in one dataframe}
+\item{method}{Arithmetic methods: "inm" = Inman (1952) difference between mean and median divided by sorting;"inmod" = Modified Inman (1952) to account for tails;"fw" = Folk and Ward (1957) combination of the above;"war" = Warren (1974) simplified Folk and Ward;"gor" = Gordon (1992) less weighting on tails in case of unreliable data;"qsk" = Quartile skewness to use only inter-quartile data points;"tra" = Trask (1932) same as qsk but with mm units. Geometric method: "fred" = Fredle Index. Ratio of mean to sorting. "all" Output results of all methods in one dataframe}
 }
 \value{
 numeric or dataframe output according to the method chosen. NOTE: reverse skewness signage if using % finer
@@ -27,3 +27,4 @@ Measure skewness from cumulative distribution data
 \examples{
 
 }
+

@@ -3,7 +3,7 @@
 #' @param sieve_size vector of sieve sizes related to input cumulative distribution
 #' @param cumu cumulative distribution pertaining to sieve sizes
 #' @param units sieve size units "phi" = phi scale, "mm" = milimeter scale
-#' @param method Method to calculate kurtosis. "fw" = Folk and Ward, 1957. This method is typically used for phi units and is fairly standard; "inm" = Inman, 1952. For phi scale and focuses on tails of distribution; "tra" = Trask, 1932. For metric (mm) data.; "sqrt" = Square root method for geometric approach in metric units;"log" = log transform metric data. Geometric approach. "all" = compute all methods into a data frame.
+#' @param method Method to calculate kurtosis. Arithmetic methods: "fw" = Folk and Ward, 1957. This method is typically used for phi units and is fairly standard; "inm" = Inman, 1952. For phi scale and focuses on tails of distribution; "tra" = Trask, 1932. For metric (mm) data. Geometric methods: "sqrt" = Square root method for geometric approach in metric units;"log" = log transform metric data. Geometric approach. "all" = compute all methods into a data frame.
 #'
 #'
 #' @return a numeric value or dataframe according to method chosen
@@ -32,7 +32,7 @@ stat.kurt <- function(sieve_size, cumu, units = "phi", method = "all"){
   p84 <- stat.dx(sieve_size, cumu, d = 0.84, phi = phi_in)
   p90 <- stat.dx(sieve_size, cumu, d = 0.90, phi = phi_in)
   p95 <- stat.dx(sieve_size, cumu, d = 0.95, phi = phi_in)
-
+## Arithmetic methods
   if (method == "fw"){
     fw <- ((p95 - p05)/(2.44*(p75 - p25)))
     return(fw)
@@ -45,6 +45,8 @@ stat.kurt <- function(sieve_size, cumu, units = "phi", method = "all"){
     tra <- (p75 - p25) / (2 * (p90 - p10))
     return(tra)
   }
+
+  ## Graphic geometric methods
   if (method == "sqrt"){
     sqrt <- sqrt((p16/p84)/(p75 - p25))
     return(sqrt)
