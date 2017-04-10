@@ -40,7 +40,7 @@ stat.sorting <- function(sieve_size, cumu, units = "phi", method = "all"){
   fw <- ((p84 - p16)/4) + ((p95 - p05)/6.6)
 
   if (method == "fw"){
-    fw <- ((p84 - p16)/4) + ((p95 - p05)/6.6)
+    fw <- ((p84 - p16)/4) + ((p95 - p05) / 6.6)
     return(fw)
   }
   if (method == "inm"){
