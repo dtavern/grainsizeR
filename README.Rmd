@@ -54,7 +54,7 @@ Scale calculations are derived from plotting two points in the image indicating 
 
 The length $L_{img}$ between the two points plotted on the image during the scaling process is calculated using Pythagorean Theorem. Using an entered value of real world length $L_{real}$, a scaling coefficient is calculated by dividing the image line length $L_{img}$ by the real-world length $L_{real}$
 
-$$C = \frac{L_{img}}{L_{real}}$$
+![Scale coefficient equation](img/c_eq.png)
 
 Each b-axis length is measured between two points on the image and converted to real world units by dividing the X and Y distance between the two points by the horizontal and vertical scaling coefficients, respectively. The X and Y distance between the two points is converted to euclidian distance using Pythagorean Theorem.
 
@@ -142,6 +142,7 @@ dtavern_facet9_leg <-   theme(panel.background = element_rect(fill = "white"),
 ```
 
 
+**Central Tendency and percentile comparison**
 
 ```{r}
 # Load example datasets
@@ -209,7 +210,11 @@ desc_comp <- data.frame("Statistic" = c("Mean",
 )
 
 knitr::kable(desc_comp)
+```
 
+**Visualization of Distributions**
+
+```{r}
 ## Generate distribution curves
 comp_dist_prop<- data.frame(
   "size_mm" = img$size.mm,
@@ -257,7 +262,11 @@ nor_dist_comp_phi <- ggplot(data = comp_dist_prop_long) +
 
 nor_dist_comp
 nor_dist_comp_phi
-
+```
+ 
+**Distribution shape: Skewness & Kurtosis** 
+ 
+```{r}
 ## Measure distribution shape with stat.kurt and stat.skew with two methods
 
 #####################

@@ -53,7 +53,7 @@ Scale calculations are derived from plotting two points in the image indicating 
 
 The length *L*<sub>*i**m**g*</sub> between the two points plotted on the image during the scaling process is calculated using Pythagorean Theorem. Using an entered value of real world length *L*<sub>*r**e**a**l*</sub>, a scaling coefficient is calculated by dividing the image line length *L*<sub>*i**m**g*</sub> by the real-world length *L*<sub>*r**e**a**l*</sub>
 
-$$C = \\frac{L\_{img}}{L\_{real}}$$
+![Scale coefficient equation](img/c_eq.png)
 
 Each b-axis length is measured between two points on the image and converted to real world units by dividing the X and Y distance between the two points by the horizontal and vertical scaling coefficients, respectively. The X and Y distance between the two points is converted to euclidian distance using Pythagorean Theorem.
 
@@ -93,6 +93,8 @@ With sieved data, size distributions can be determined by `cumudist()` which tak
 
 Example workflow
 ----------------
+
+**Central Tendency and percentile comparison**
 
 ``` r
 # Load example datasets
@@ -173,6 +175,8 @@ knitr::kable(desc_comp)
 | D75               |  106.390305|   97.829908|
 | D84               |  138.913668|  116.755517|
 
+**Visualization of Distributions**
+
 ``` r
 ## Generate distribution curves
 comp_dist_prop<- data.frame(
@@ -222,13 +226,15 @@ nor_dist_comp_phi <- ggplot(data = comp_dist_prop_long) +
 nor_dist_comp
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ``` r
 nor_dist_comp_phi
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-2.png)
+![](README_files/figure-markdown_github/unnamed-chunk-3-2.png)
+
+**Distribution shape: Skewness & Kurtosis**
 
 ``` r
 ## Measure distribution shape with stat.kurt and stat.skew with two methods
