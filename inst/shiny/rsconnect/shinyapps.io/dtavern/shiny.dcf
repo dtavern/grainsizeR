@@ -1,0 +1,10 @@
+name: shiny
+title: shiny
+account: dtavern
+server: shinyapps.io
+appId: 171163
+bundleId: 783725
+url: https://dtavern.shinyapps.io/shiny/
+when: 1491840563.26359
+asMultiple: FALSE
+asStatic: FALSE
