@@ -54,7 +54,7 @@ Scale calculations are derived from plotting two points in the image indicating 
 
 The length $L_{img}$ between the two points plotted on the image during the scaling process is calculated using Pythagorean Theorem. Using an entered value of real world length $L_{real}$, a scaling coefficient is calculated by dividing the image line length $L_{img}$ by the real-world length $L_{real}$
 
-![Scale coefficient equation](img/c_eq.png)
+![Scale coefficient equation](img/c_eq.PNG)
 
 Each b-axis length is measured between two points on the image and converted to real world units by dividing the X and Y distance between the two points by the horizontal and vertical scaling coefficients, respectively. The X and Y distance between the two points is converted to euclidian distance using Pythagorean Theorem.
 
